@@ -16,6 +16,7 @@ namespace DataLayer.UnitOfWork
         ProductRepository ProductRepository { get; }
         RoleRepository RoleRepository { get; }
         SupplyRepository SupplyRepository { get; }
+        AccountOrderRepository AccountOrderRepository { get; }
         void Dispose();
         Task Save();
     }

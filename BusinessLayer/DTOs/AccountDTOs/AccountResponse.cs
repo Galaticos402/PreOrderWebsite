@@ -8,6 +8,7 @@ namespace BusinessLayer.DTOs
 {
     public class AccountResponse
     {
+        public int AccountId { get; set; }
         public string? Phone { get; set; }
         public string? Email { get; set; }
         public int RoleId { get; set; }

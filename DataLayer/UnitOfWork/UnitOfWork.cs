@@ -18,7 +18,7 @@ namespace DataLayer.UnitOfWork
         private readonly ProductRepository _productRepository;
         private readonly RoleRepository _roleRepository;
         private readonly SupplyRepository _supplyRepository;
-
+        private readonly AccountOrderRepository _accountOrderRepository;
         public UnitOfWork(DatabaseContext context)
         {
             _context = context; 
@@ -29,6 +29,7 @@ namespace DataLayer.UnitOfWork
             _productRepository = new ProductRepository(_context);
             _roleRepository = new RoleRepository(_context);
             _supplyRepository = new SupplyRepository(_context);
+            _accountOrderRepository = new AccountOrderRepository(_context);
         }
 
         public AccountRepository AccountRepository => _accountRepository;
@@ -44,6 +45,7 @@ namespace DataLayer.UnitOfWork
         public RoleRepository RoleRepository => _roleRepository;
 
         public SupplyRepository SupplyRepository => _supplyRepository;
+        public AccountOrderRepository AccountOrderRepository => _accountOrderRepository;
 
         public void Dispose()
         {

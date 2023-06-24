@@ -10,6 +10,7 @@ namespace DataLayer.Models
         public int Unit { get; set; }
         public string? Note { get; set; }
         public int? AccountId { get; set; }
+        public string? Status { get; set; }
 
         public virtual Account? Account { get; set; }
         public virtual Product Product { get; set; } = null!;

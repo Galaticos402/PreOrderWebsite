@@ -30,7 +30,11 @@ namespace DataLayer.Repositories
                 .Include(x => x.Addresses)  
                 .ToListAsync();
         }
-        
+
+        public bool IsUsernameDuplicated(String username)
+        {
+            return _context.Accounts.Any(x => x.UserName == username);
+        }
     }
 
 }

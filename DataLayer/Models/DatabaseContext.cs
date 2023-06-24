@@ -57,6 +57,10 @@ namespace DataLayer.Models
                     .HasMaxLength(50)
                     .IsUnicode(false);
 
+                entity.Property(e => e.Status)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
+
                 entity.Property(e => e.UserName)
                     .HasMaxLength(50)
                     .IsUnicode(false);
@@ -73,6 +77,10 @@ namespace DataLayer.Models
                 entity.ToTable("AccountOrder");
 
                 entity.Property(e => e.Note).HasMaxLength(500);
+
+                entity.Property(e => e.Status)
+                    .HasMaxLength(10)
+                    .IsUnicode(false);
 
                 entity.HasOne(d => d.Account)
                     .WithMany(p => p.AccountOrders)

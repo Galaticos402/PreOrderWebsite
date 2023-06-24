@@ -22,7 +22,25 @@ namespace BusinessLayer
                 .ForMember(des => des.RoleName, act => act.MapFrom(src => src.Role.RoleName))
                 .ForMember(des => des.AddressResponses, act => act.MapFrom(src => src.Addresses));
 
-            // 
+            //Product
+            CreateMap<Product, ProductResponse>()
+                .ForMember(des => des.CategoryName, act => act.MapFrom(src => src.Category.Name))
+                .ForMember(des => des.SupplyName, act => act.MapFrom(src => src.Supply.Topic));
+            CreateMap<ProductCreateRequest, Product>();
+            CreateMap<ProductUpdateRequest, Product>();
+
+            //Category
+            CreateMap<Category, CategoryResponse>();
+            CreateMap<CategoryCreateRequest, Category>();
+            //Supplier
+            CreateMap<Supply, SupplierResponse>();
+            CreateMap<SupplierCreateRequest, Supply>();
+
+            //Order
+            CreateMap<OrderCreateRequest, AccountOrder>();
+            CreateMap<AccountOrder, OrderResponse>()
+                .ForMember(des => des.CustomerFullName, act => act.MapFrom(src => src.Account.FullName));
+
         }
     }
 }

@@ -1,6 +1,7 @@
 using API.Middleware;
 using AutoMapper;
 using BusinessLayer;
+using BusinessLayer.Services;
 using BusinessLayer.Services.AccountService;
 using DataLayer.Models;
 using DataLayer.Repositories;
@@ -30,6 +31,9 @@ services.AddScoped<AddressRepository>();
 services.AddScoped<IUnitOfWork,UnitOfWork>();
 
 services.AddScoped<IAccountService>(services => new AccountService(services.GetRequiredService<IUnitOfWork>(), services.GetRequiredService<IMapper>()));
+//services.AddScoped<IProductService>(services => new ProductService(services.GetRequiredService<IUnitOfWork>(), services.GetService<IMapper>()));
+services.AddScoped<IProductService, ProductService>();
+services.AddScoped<IOrderService, OrderService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

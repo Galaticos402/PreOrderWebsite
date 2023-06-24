@@ -35,6 +35,10 @@ namespace BusinessLayer.Services.AccountService
             {
                 throw new IdNotFoundException($"Account Id: {id} not found!");
             }
+            if (account.Status == "BANNED")
+            {
+                throw new InactivedItemException($"Account ID: {id} is Banned");
+            }
             return account;
         }
         public async Task<ObjectResult> GetAccountById(int id)
@@ -49,6 +53,7 @@ namespace BusinessLayer.Services.AccountService
             var expressions = new List<Expression<Func<Account, bool>>>()
             {
                 x => x.FullName.ToLower().Contains(fullName.ToLower()),
+                x => x.Status == "ACTIVE"
             };
             var accounts = await _unitOfWork.AccountRepository.GetAccountsWithAddresses(expressions, page);
             var accountResponses = accounts.Select(x => _mapper.Map<AccountResponse>(x));
@@ -57,7 +62,12 @@ namespace BusinessLayer.Services.AccountService
 
         public async Task<ObjectResult> CreateAccount(AccountCreateRequest request)
         {
+            if (_unitOfWork.AccountRepository.IsUsernameDuplicated(request.UserName))
+            {
+                throw new DuplicateUsernameException($"Username: {request.UserName} is duplicated");
+            }
             Account account = _mapper.Map<Account>(request);
+            account.Status = "ACTIVE";
             _unitOfWork.AccountRepository.Create(account);
             await _unitOfWork.Save();
             return new ObjectResult(account.AccountId);
@@ -79,7 +89,8 @@ namespace BusinessLayer.Services.AccountService
             var expressions = new List<Expression<Func<Account, bool>>>();
             expressions.Add(x => x.AccountId == id);
             Account account = (await _unitOfWork.AccountRepository.GetAccounts(expressions, Constant.PAGE_SINGLE_ITEM)).FirstOrDefault();
-            _unitOfWork.AccountRepository.Delete(account);
+            //_unitOfWork.AccountRepository.Delete(account);
+            account.Status = "BANNED";
             await _unitOfWork.Save();   
             return new ObjectResult("Deleted");
         }

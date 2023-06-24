@@ -14,6 +14,13 @@ namespace DataLayer.Repositories
         public ProductRepository(DatabaseContext context) : base(context)
         {
         }
+        public async Task<Product> GetProductById(int id)
+        {
+            return await _context.Products
+                .Include(x => x.Category)
+                .Include(x => x.Supply)
+                .FirstOrDefaultAsync(x => x.ProductId == id); 
+        }
         public async Task<List<Product>> GetProducts(List<Expression<Func<Product, bool>>> predicates, Paging page)
         {
             var query = attachPredicates(predicates);
