@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\acern\\source\\capstone\\PE_PRN221\\PreOrderWebApp\\DataLayer\\DataLayer.csproj": {}
+    "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\DataLayer\\DataLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\acern\\source\\capstone\\PE_PRN221\\PreOrderWebApp\\DataLayer\\DataLayer.csproj": {
+    "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acern\\source\\capstone\\PE_PRN221\\PreOrderWebApp\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\acern\\source\\capstone\\PE_PRN221\\PreOrderWebApp\\DataLayer\\DataLayer.csproj",
+        "projectPath": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\DataLayer\\DataLayer.csproj",
         "packagesPath": "C:\\Users\\acern\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acern\\source\\capstone\\PE_PRN221\\PreOrderWebApp\\DataLayer\\obj\\",
+        "outputPath": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\acern\\AppData\\Roaming\\NuGet\\NuGet.Config",

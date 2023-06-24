@@ -18,8 +18,6 @@ namespace BusinessLayer.DTOs
         public string? Phone { get; set; }
         [RegularExpression(@"^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$", ErrorMessage = "Invalid Email.")]
         public string? Email { get; set; }
-        [Required(ErrorMessage = "Must provide RoleId")]
-        public int RoleId { get; set; }
         [MaxLength(200)]
         public string? FullName { get; set; }
     }

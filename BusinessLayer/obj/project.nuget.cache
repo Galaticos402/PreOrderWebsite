@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "wd89OCIluXuY46mKE03sj4etiohPBx0he3twM/ZWRoK+g0y1M/pXFvVlrQ+qTG4nPRVc85YXl7t4+1560CGMng==",
+  "dgSpecHash": "e1oMajfkDRg+N8oilwBcM3VyGfPO/2s8VZX5vDPn8boYe8WTDPguPmkG+TNj+0zCh04os/upESmM9WXiMHdC4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\acern\\source\\capstone\\PE_PRN221\\PreOrderWebApp\\BusinessLayer\\BusinessLayer.csproj",
+  "projectFilePath": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\acern\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\acern\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",

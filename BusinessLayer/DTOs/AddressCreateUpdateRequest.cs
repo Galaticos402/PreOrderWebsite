@@ -9,6 +9,5 @@ namespace BusinessLayer.DTOs
     public class AddressCreateUpdateRequest
     {
         public String Detail { get; set; } = null!;
-        public int AccountId { get; set; }
     }
 }
