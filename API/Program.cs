@@ -34,6 +34,7 @@ services.AddScoped<IAccountService>(services => new AccountService(services.GetR
 //services.AddScoped<IProductService>(services => new ProductService(services.GetRequiredService<IUnitOfWork>(), services.GetService<IMapper>()));
 services.AddScoped<IProductService, ProductService>();
 services.AddScoped<IOrderService, OrderService>();
+services.AddScoped<IProductCampaignService, ProductCampaignService>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

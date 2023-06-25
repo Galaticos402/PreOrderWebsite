@@ -19,8 +19,16 @@ namespace DataLayer.Repositories
         {
             var query = attachPredicates(predicates);
             return await paging(query, page)
+                .Include(x=> x.Product)
                 .Include(x=> x.DepositAmount)
                 .ToListAsync();
+        }
+        public async Task<ProductCampaign> GetCampaignByid(int id)
+        {
+            return await _context.ProductCampaigns
+                .Include(x=> x.Product)
+                .Include(x=> x.DepositAmount)
+                .FirstOrDefaultAsync(x => x.ProductCampaignId == id);
         }
     }
 }

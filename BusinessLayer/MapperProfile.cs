@@ -41,6 +41,13 @@ namespace BusinessLayer
             CreateMap<AccountOrder, OrderResponse>()
                 .ForMember(des => des.CustomerFullName, act => act.MapFrom(src => src.Account.FullName));
 
+            //ProductCampaign
+            CreateMap<ProductCampaign, ProductCampaignResponse>()
+                .ForMember(des => des.ProductName, act=> act.MapFrom(src => src.Product.ProductName))
+                .ForMember(des => des.DepositAmount, act => act.MapFrom(src => src.DepositAmount.Amount));
+            CreateMap<ProductCampaignCreateRequest, ProductCampaign>();
+            CreateMap<ProductCampaignUpdateRequest, ProductCampaign>();
+
         }
     }
 }
