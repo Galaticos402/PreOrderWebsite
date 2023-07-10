@@ -278,6 +278,7 @@ C:\Users\acern\source\capstone\PreOrderWebsite\API\bin\Debug\net6.0\AutoMapper.d
 C:\Users\acern\source\capstone\PreOrderWebsite\API\bin\Debug\net6.0\Humanizer.dll
 C:\Users\acern\source\capstone\PreOrderWebsite\API\bin\Debug\net6.0\MessagePack.dll
 C:\Users\acern\source\capstone\PreOrderWebsite\API\bin\Debug\net6.0\MessagePack.Annotations.dll
+C:\Users\acern\source\capstone\PreOrderWebsite\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\acern\source\capstone\PreOrderWebsite\API\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\acern\source\capstone\PreOrderWebsite\API\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\acern\source\capstone\PreOrderWebsite\API\bin\Debug\net6.0\Microsoft.Build.Locator.dll
@@ -536,4 +537,3 @@ C:\Users\acern\source\capstone\PreOrderWebsite\API\obj\Debug\net6.0\refint\API.d
 C:\Users\acern\source\capstone\PreOrderWebsite\API\obj\Debug\net6.0\API.pdb
 C:\Users\acern\source\capstone\PreOrderWebsite\API\obj\Debug\net6.0\API.genruntimeconfig.cache
 C:\Users\acern\source\capstone\PreOrderWebsite\API\obj\Debug\net6.0\ref\API.dll
-C:\Users\acern\source\capstone\PreOrderWebsite\API\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

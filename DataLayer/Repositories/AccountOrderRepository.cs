@@ -22,6 +22,12 @@ namespace DataLayer.Repositories
                 .ToListAsync();
                 
         }
+        public async Task<List<AccountOrder>> GetOrdersByProductId(int productId, String status)
+        {
+            return await _context.AccountOrders
+                .Where(x => x.ProductId == productId && x.Status.ToLower().Equals(status.ToLower()))
+                .ToListAsync();
+        }
         public async Task<List<AccountOrder>> GetOrders(Paging page)
         {
             var query = _context.AccountOrders.Where(x => true);
