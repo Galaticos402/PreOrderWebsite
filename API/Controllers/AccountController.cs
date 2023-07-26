@@ -2,6 +2,7 @@
 using BusinessLayer.Services;
 using BusinessLayer.Services.AccountService;
 using DataLayer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
@@ -10,6 +11,7 @@ namespace API.Controllers
 {
     [Route("api/v1/accounts")]
     [ApiController]
+    [Authorize(Roles =("ADMIN"))]
     public class AccountController : ControllerBase
     {
         private readonly IAccountService _accountService;

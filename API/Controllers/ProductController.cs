@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.DTOs;
 using BusinessLayer.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
@@ -18,6 +19,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "ADMIN")]
         public async Task<IActionResult> CreateProduct(ProductCreateRequest request)
         {
             var result = await _productService.CreateProduct(request);
@@ -25,6 +27,7 @@ namespace API.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "ADMIN")]
         public async Task<IActionResult> UpdateProduct(int id, ProductUpdateRequest request)
         {
             var result = await _productService.UpdateProduct(id, request);
@@ -32,6 +35,7 @@ namespace API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "ADMIN")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
             var result = await _productService.DeleteProduct(id);
@@ -53,28 +57,33 @@ namespace API.Controllers
         }
 
         [HttpPost("categories")]
+        [Authorize(Roles = "ADMIN")]
         public async Task<IActionResult> CreateCategory(CategoryCreateRequest request)
         {
             return await _productService.CreateCategory(request);
         }
 
         [HttpPut("categories/{id}")]
+        [Authorize(Roles = "ADMIN")]
         public async Task<IActionResult> UpdateCategory(int id, CategoryCreateRequest request)
         {
             return await _productService.UpdateCategory(id,request);
         }
 
         [HttpGet("categories")]
+        [Authorize(Roles = "ADMIN")]
         public async Task<IActionResult> GetCategories([Required] int pageSize, [Required] int pageNumber)
         {
             return await _productService.GetCategories(pageSize, pageNumber);
         }
         [HttpGet("suppliers")]
+
         public async Task<IActionResult> GetSuppliers()
         {
             return await _productService.GetSuppliers();
         }
         [HttpPost("suppliers")]
+        [Authorize(Roles = "ADMIN")]
         public async Task<IActionResult> CreateSupplier(SupplierCreateRequest request)
         {
             return await _productService.CreateSupplier(request);

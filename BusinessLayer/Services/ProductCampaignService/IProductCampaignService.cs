@@ -15,5 +15,6 @@ namespace BusinessLayer.Services
         Task<ObjectResult> GetCampaigns(int pageSize, int pageNumber);
         Task<ObjectResult> CreateCampaign(ProductCampaignCreateRequest request);
         Task<ObjectResult> UpdateCampaign(int id, ProductCampaignUpdateRequest request);
+        Task<ObjectResult> GetOrdersByProductId(int productId);
     }
 }

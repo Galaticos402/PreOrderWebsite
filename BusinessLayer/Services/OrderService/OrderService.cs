@@ -3,6 +3,7 @@ using BusinessLayer.DTOs;
 using BusinessLayer.Exceptions;
 using DataLayer.Models;
 using DataLayer.UnitOfWork;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -54,9 +55,10 @@ namespace BusinessLayer.Services
             return new ObjectResult(res);
         }
 
-        public async Task<ObjectResult> CreateOrder(OrderCreateRequest request)
+        public async Task<ObjectResult> CreateOrder(OrderCreateRequest request, int accountId)
         {
             var order = _mapper.Map<AccountOrder>(request);
+            order.AccountId = accountId;
             order.Status = "PENDING";
             _unitOfWork.AccountOrderRepository.Create(order);
             await _unitOfWork.Save();

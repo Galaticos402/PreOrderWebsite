@@ -5,9 +5,10 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Linq.Expressions;
 using System.Security.Claims;
 using System.Text;
-
+using BusinessLayer.Services;
 namespace API.Controllers
 {
     [Route("api/authentication")]
@@ -25,13 +26,15 @@ namespace API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginInfo loginInfo)
         {
-            var account = new Account
-            {
-                AccountId = 1,
-                UserName = loginInfo.UserName,
-            };
+            List<Expression<Func<Account, bool>>> expressions = new List<Expression<Func<Account, bool>>>();
+            expressions.Add(x => x.UserName == loginInfo.UserName && x.Password == loginInfo.Password);
+            var account = (await _unitOfWork.AccountRepository.GetAccounts(expressions, Constant.PAGE_SINGLE_ITEM)).FirstOrDefault();
+            if (account == null) 
+            { 
+                return NotFound();
+            }
             String role;
-            if (loginInfo.UserName.Contains("a"))
+            if (account.RoleId == 2)
             {
                 role = "USER";
             }

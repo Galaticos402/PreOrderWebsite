@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.DTOs;
 using BusinessLayer.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +8,7 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("api/product-campaigns")]
+    [Authorize(Roles ="ADMIN")]
     public class ProductCampaignController : ControllerBase
     {
         private readonly IProductCampaignService _productCampaignService;
@@ -48,6 +50,12 @@ namespace API.Controllers
         public async Task<IActionResult> UpdateCampaign(int id, ProductCampaignUpdateRequest request)
         {
             var result = await _productCampaignService.UpdateCampaign(id, request);
+            return result;
+        }
+        [HttpGet("orders/product/{productId}")]
+        public async Task<IActionResult> GetOrdersByProductId(int productId)
+        {
+            var result = await _productCampaignService.GetOrdersByProductId(productId);
             return result;
         }
     }

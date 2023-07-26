@@ -92,6 +92,7 @@ namespace BusinessLayer.Services
             await _unitOfWork.Save();
             return new ObjectResult(campaign.ProductCampaignId);
         }
+
         private async Task<List<AccountOrder>> GetAccountOrdersByProductId(int productId)
         {
             var orders = await _unitOfWork.AccountOrderRepository.GetOrdersByProductId(productId, "PENDING");
@@ -104,6 +105,18 @@ namespace BusinessLayer.Services
             _unitOfWork.ProductCampaignRepository.Update(campaign);
             await _unitOfWork.Save();
             return new ObjectResult("Updated");
+        }
+        public async Task<ObjectResult> GetOrdersByProductId(int productId)
+        {
+            var orders = await GetAccountOrdersByProductId(productId);
+            
+            int sum = orders.Sum(x => x.Unit);
+            OrderStatisticResponse response = new OrderStatisticResponse()
+            {
+                SumProducts = sum,
+                Orders = orders.Select(x=> _mapper.Map<OrderResponse>(x)).ToList(),
+            };
+            return new ObjectResult(response);
         }
 
     }

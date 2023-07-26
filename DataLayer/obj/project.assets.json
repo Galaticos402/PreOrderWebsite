@@ -9876,19 +9876,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\TRID\\.nuget\\packages\\": {}
+    "C:\\Users\\acern\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\DataLayer\\DataLayer.csproj",
+      "projectUniqueName": "C:\\Users\\acern\\source\\PreOrderWebsite\\DataLayer\\DataLayer.csproj",
       "projectName": "DataLayer",
-      "projectPath": "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\DataLayer\\DataLayer.csproj",
-      "packagesPath": "C:\\Users\\TRID\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\DataLayer\\obj\\",
+      "projectPath": "C:\\Users\\acern\\source\\PreOrderWebsite\\DataLayer\\DataLayer.csproj",
+      "packagesPath": "C:\\Users\\acern\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\acern\\source\\PreOrderWebsite\\DataLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\TRID\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\acern\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9951,7 +9951,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23330.10\\RuntimeIdentifierGraph.json"
       }
     }
   }
