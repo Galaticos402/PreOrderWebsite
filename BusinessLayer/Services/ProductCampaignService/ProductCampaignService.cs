@@ -6,6 +6,7 @@ using DataLayer.UnitOfWork;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -69,7 +70,7 @@ namespace BusinessLayer.Services
             }
 
         }
-        public async Task<ObjectResult> CreateCampaign(ProductCampaignCreateRequest request)
+        public async Task<ObjectResult> CreateCampaign([FromBody] ProductCampaignCreateRequest request)
         {
             checkDate(request.StartDate, request.EndDate);
             var campaign = _mapper.Map<ProductCampaign>(request);

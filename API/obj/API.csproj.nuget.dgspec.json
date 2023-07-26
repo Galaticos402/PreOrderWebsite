@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\API\\API.csproj": {}
+    "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\API\\API.csproj": {
+    "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\acern\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\API\\obj\\",
+        "projectPath": "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\TRID\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\acern\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\TRID\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +22,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\BusinessLayer\\BusinessLayer.csproj": {
-                "projectPath": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\BusinessLayer\\BusinessLayer.csproj"
+              "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\BusinessLayer\\BusinessLayer.csproj": {
+                "projectPath": "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\BusinessLayer\\BusinessLayer.csproj"
               }
             }
           }
@@ -63,7 +64,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -75,21 +77,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\BusinessLayer\\BusinessLayer.csproj": {
+    "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\BusinessLayer\\BusinessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\BusinessLayer\\BusinessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\BusinessLayer\\BusinessLayer.csproj",
         "projectName": "BusinessLayer",
-        "projectPath": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\BusinessLayer\\BusinessLayer.csproj",
-        "packagesPath": "C:\\Users\\acern\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\BusinessLayer\\obj\\",
+        "projectPath": "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\BusinessLayer\\BusinessLayer.csproj",
+        "packagesPath": "C:\\Users\\TRID\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\BusinessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\acern\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\TRID\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -103,8 +105,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\DataLayer\\DataLayer.csproj": {
-                "projectPath": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\DataLayer\\DataLayer.csproj"
+              "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\DataLayer\\DataLayer.csproj": {
+                "projectPath": "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\DataLayer\\DataLayer.csproj"
               }
             }
           }
@@ -134,7 +136,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -143,21 +146,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\DataLayer\\DataLayer.csproj": {
+    "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\DataLayer\\DataLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\DataLayer\\DataLayer.csproj",
+        "projectUniqueName": "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\DataLayer\\DataLayer.csproj",
         "projectName": "DataLayer",
-        "projectPath": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\DataLayer\\DataLayer.csproj",
-        "packagesPath": "C:\\Users\\acern\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\acern\\source\\capstone\\PreOrderWebsite\\DataLayer\\obj\\",
+        "projectPath": "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\DataLayer\\DataLayer.csproj",
+        "packagesPath": "C:\\Users\\TRID\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\TRID\\MyOwnProject\\PreOrderWebsite\\DataLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\acern\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\TRID\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -210,7 +213,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -219,7 +223,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400-preview.23225.8\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -8,6 +8,7 @@ namespace BusinessLayer.DTOs
 {
     public class SupplierCreateRequest
     {
+
         public string Topic { get; set; } = null!;
     }
     public class SupplierResponse
